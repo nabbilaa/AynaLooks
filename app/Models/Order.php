@@ -27,7 +27,7 @@ class Order extends Model
     const STATUS_MENUNGGU = 'menunggu';
     const STATUS_DIPROSES = 'diproses';
     const STATUS_DIKIRIM = 'dikirim';
-    const STATUS_SELESAI = 'selesai';
+    const STATUS_COMPLETED = 'completed';
     const STATUS_DIBATALKAN = 'dibatalkan';
 
     public function items(): HasMany
@@ -38,6 +38,11 @@ class Order extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
     }
 
     protected function nomorWhatsapp(): Attribute

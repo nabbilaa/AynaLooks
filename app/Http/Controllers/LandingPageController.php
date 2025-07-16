@@ -9,23 +9,24 @@ use App\Models\Produk;
 class LandingPageController extends Controller
 {
     public function index(Request $request)
-    {
-        $kategori = Kategori::all();
-        $produkQuery = Produk::with('kategori')->latest();
+{
+    $kategori = Kategori::all();
+    $produkQuery = Produk::with('kategori')->latest();
 
-        if ($request->has('category_id')) {
-            $produkQuery->where('kategori_id', $request->category_id);
-        }
-
-        $produk = $produkQuery->get();
-
-        return view('landing.index', [
-            'kategori' => $kategori,
-            'produk' => $produk,
-            'selected_kategori' => $request->category_id ?? null,
-        ]);
+    if ($request->has('category_id')) {
+        $produkQuery->where('kategori_id', $request->category_id);
+    } else {
+        $produkQuery->take(4); // Limit to 4 latest products when no category filter
     }
+    
+    $produk = $produkQuery->get();
 
+    return view('landing.index', [
+        'kategori' => $kategori,
+        'produk' => $produk,
+        'selected_kategori' => $request->category_id ?? null,
+    ]);
+}
     public function about()
     {
         return view('landing.about');

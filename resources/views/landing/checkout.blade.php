@@ -6,7 +6,7 @@
     
     @if(empty($cartItems))
         <div class="alert alert-warning">Keranjang belanja kosong</div>
-        <a href="{{ route('products') }}" class="btn btn-primary">Kembali ke Produk</a>
+        <a href="{{ route('landing.category') }}" class="btn btn-primary">Kembali ke Produk</a>
     @else
         <div class="row">
             <div class="col-md-8">

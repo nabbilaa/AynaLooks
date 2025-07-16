@@ -59,10 +59,6 @@
                     <td>{{ $order->created_at->format('d/m/Y H:i') }}</td>
                     <td>
                         <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" 
-                                data-bs-target="#detailModal{{ $order->id }}">
-                                <i class="fas fa-eye"></i>
-                            </button>
                             <a href="{{ route('orders.edit', $order->id) }}" 
                                 class="btn btn-sm btn-outline-success">
                                 <i class="fas fa-edit"></i>

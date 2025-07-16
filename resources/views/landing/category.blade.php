@@ -163,56 +163,54 @@
     </section>
 
     <!-- Produk Section -->
-    <section id="produk" class="produk section" style="background-color: #E0E0E0;">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Daftar Produk</h2>
-            <p>Lihat berbagai produk yang kami tawarkan.</p>
-        </div>
+<section id="produk" class="produk section" style="background-color: #E0E0E0;">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Daftar Produk</h2>
+        <p>Lihat berbagai produk yang kami tawarkan.</p>
+    </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row gy-4">
-                @forelse ($produk as $item)
-                    <div class="col-lg-3 col-md-4">
-                        <div class="product-item p-3 border rounded shadow-sm text-center"
-                            style="background-color: #F5F5F5;">
-                            <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->nama_produk }}"
-                                class="img-fluid mb-2" style="height: 150px; object-fit: cover;">
-                            <h5 class="mb-1">{{ $item->nama_produk }}</h5>
-                            <p class="text-muted mb-1">Kategori: {{ $item->kategori->nama ?? '-' }}</p>
-                            <p class="mb-1">Stok: {{ $item->stok }}</p>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            @forelse ($produk as $item)
+                <div class="col-lg-3 col-md-4">
+                    <div class="product-item p-3 border rounded shadow-sm text-center"
+                        style="background-color: #F5F5F5;">
+                        <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->nama_produk }}"
+                            class="img-fluid mb-2" style="height: 150px; object-fit: cover;">
+                        <h5 class="mb-1">{{ $item->nama_produk }}</h5>
+                        <p class="text-muted mb-1">Kategori: {{ $item->kategori->nama ?? '-' }}</p>
+                        <p class="mb-1">Stok: {{ $item->stok }}</p>
+                        <p class="mb-1">Harga: IDR {{ number_format($item->harga, 0, ',', '.') }}</p> <!-- Added price -->
 
-                            {{-- Tombol toggle deskripsi --}}
-                            <button class="btn btn-outline-info btn-sm mb-2" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#deskripsi{{ $item->id }}" aria-expanded="false"
-                                aria-controls="deskripsi{{ $item->id }}">
-                                Lihat Deskripsi
-                            </button>
+                        {{-- Tombol toggle deskripsi --}}
+                        <button class="btn btn-outline-info btn-sm mb-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#deskripsi{{ $item->id }}" aria-expanded="false"
+                            aria-controls="deskripsi{{ $item->id }}">
+                            Lihat Deskripsi
+                        </button>
 
-                            {{-- Konten deskripsi --}}
-                            <div class="collapse text-start mb-2" id="deskripsi{{ $item->id }}">
-                                <p class="small">{{ $item->deskripsi }}</p>
-                            </div>
-
-                            {{-- Form tambah ke keranjang dengan ikon --}}
-                            <form action="{{ route('cart.add') }}" method="POST" class="d-inline">
-                                @csrf
-                                <input type="hidden" name="produk_id" value="{{ $item->id }}">
-                                <input type="hidden" name="jumlah" value="1">
-                                <button type="submit" class="btn btn-outline-primary btn-sm" title="Tambah ke Keranjang">
-                                    <i class="bi bi-cart-plus"></i>
-                                </button>
-                            </form>
-
-
+                        {{-- Konten deskripsi --}}
+                        <div class="collapse text-start mb-2" id="deskripsi{{ $item->id }}">
+                            <p class="small">{{ $item->deskripsi }}</p>
                         </div>
-                    </div>
-                @empty
-                    <p class="text-center">Tidak ada produk ditemukan</p>
-                @endforelse
-            </div>
-        </div>
-    </section>
 
+                        {{-- Form tambah ke keranjang dengan ikon --}}
+                        <form action="{{ route('cart.add') }}" method="POST" class="d-inline">
+                            @csrf
+                            <input type="hidden" name="produk_id" value="{{ $item->id }}">
+                            <input type="hidden" name="jumlah" value="1">
+                            <button type="submit" class="btn btn-outline-primary btn-sm" title="Tambah ke Keranjang">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            @empty
+                <p class="text-center">Tidak ada produk ditemukan</p>
+            @endforelse
+        </div>
+    </div>
+</section>
     </main>
 
     <!-- Footer -->

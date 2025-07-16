@@ -92,7 +92,7 @@
           <ul>
             <li><a href="{{ route('landing.index') }}" class="active">Home</a></li>
             <li><a href="{{ route('landing.about') }}">About</a></li>
-            <li><a href="{{ route('landing.category') }}">Category</a></li>
+            <li><a href="{{ route('landing.category') }}">Produk</a></li>
             <li><a href="{{ route('landing.contact') }}">Contact</a></li>
           </ul>
         </nav>
@@ -112,12 +112,12 @@
           <div class="col-lg-6 content-col" data-aos="fade-right" data-aos-delay="100">
             <div class="content">
               <span class="promo-badge">New Collection 2025</span>
-              <h1>Hijab Premium Berbahan <span>Nyaman</span></h1>
-              <p>Material premium, desain elegan, dan nyaman untuk gaya sehari-hari Anda.</p>
+              <h1>Hijab Segiempat <span>&</span>Pashmina</h1>
+              <p>Keep You're Beauty With Wearing Hijab</p>
               <div class="hero-cta">
                 <a href="{{ route('landing.category') }}" class="btn btn-shop">Mulai Belanja <i
                     class="bi bi-arrow-right"></i></a>
-                <a href="{{ route('landing.product') }}" class="btn btn-collection">Lihat Koleksi</a>
+                <a href="{{ route('landing.category') }}" class="btn btn-collection">Lihat Koleksi</a>
               </div>
               <div class="hero-features">
                 <div class="feature-item">
@@ -192,8 +192,8 @@
     <!-- Hot Product Ayna's Section -->
     <section id="hot-product" class="produk section" style="background-color: #E0E0E0;">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Hot Product Ayna's</h2>
-        <p>Temukan hijab unggulan kami yang paling diminati.</p>
+        <h2>New Collection Ayna's</h2>
+        <p>Temukan hijab baru kami yang paling diminati.</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         @if ($produk->isEmpty())
@@ -242,36 +242,36 @@
             <div class="tutorial-card text-center">
               <div class="video-wrapper">
                 <iframe src="https://www.instagram.com/reel/C-_leBUSvXh/embed" frameborder="0" scrolling="no"
-                  allowtransparency="true" class="tutorial-video"></iframe>
+                  allowtransparency="true" class="tutorial-video" width="100%" height="300" allowfullscreen></iframe>
               </div>
-              <h5 class="mt-3">Tutorial Hijab Voal</h5>
-              <p class="text-muted">Cara memakai hijab voal untuk gaya sehari-hari.</p>
+              <h5 class="mt-3">Tutorial Hijab Plan Square</h5>
+              <p class="text-muted">Cara memakai hijab Plan Square untuk gaya sehari-hari.</p>
               <a href="{{ route('landing.category', ['category_id' => 1]) }}"
-                class="btn btn-outline-primary btn-sm">Lihat Produk Voal</a>
+                class="btn btn-outline-primary btn-sm">Lihat Produk</a>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="tutorial-card text-center">
               <div class="video-wrapper">
                 <iframe src="https://www.instagram.com/reel/C1J2l44PvHn/embed" frameborder="0" scrolling="no"
-                  allowtransparency="true" class="tutorial-video"></iframe>
+                  allowtransparency="true" class="tutorial-video" width="100%" height="300" allowfullscreen></iframe>
               </div>
-              <h5 class="mt-3">Tutorial Pashmina</h5>
-              <p class="text-muted">Gaya pashmina elegan untuk acara spesial.</p>
+              <h5 class="mt-3">Tutorial Paris Premium</h5>
+              <p class="text-muted">Gaya Paris Premium elegan untuk acara spesial.</p>
               <a href="{{ route('landing.category', ['category_id' => 2]) }}"
-                class="btn btn-outline-primary btn-sm">Lihat Produk Pashmina</a>
+                class="btn btn-outline-primary btn-sm">Lihat Produk</a>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="tutorial-card text-center">
               <div class="video-wrapper">
                 <iframe src="https://www.instagram.com/reel/C851OUfPgSx/embed" frameborder="0" scrolling="no"
-                  allowtransparency="true" class="tutorial-video"></iframe>
+                  allowtransparency="true" class="tutorial-video" width="100%" height="300" allowfullscreen></iframe>
               </div>
-              <h5 class="mt-3">Tutorial Shimmer Hijab</h5>
-              <p class="text-muted">Tampil berkilau dengan hijab shimmer.</p>
+              <h5 class="mt-3">Tutorial Voal</h5>
+              <p class="text-muted">Tampil berkilau dengan hijab Voal.</p>
               <a href="{{ route('landing.category', ['category_id' => 4]) }}"
-                class="btn btn-outline-primary btn-sm">Lihat Produk Shimmer</a>
+                class="btn btn-outline-primary btn-sm">Lihat Produk</a>
             </div>
           </div>
         </div>
@@ -299,8 +299,8 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="text-center">
-                  <img src="{{ asset('template1/assets/img/testimonial/testi1.jpg') }}" alt="Testimoni 1"
-                    class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img src="{{ asset('template1/assets/img/testimoni/testi (1).jpg') }}" alt="Testimoni 1"
+                    class="img-fluid rounded" style="width: 300px; height: auto; object-fit: contain;">
                   <h5 class="mt-2">Siti Aminah</h5>
                   <div class="rating">
                     <i class="bi bi-star-fill text-warning"></i>
@@ -314,8 +314,8 @@
               </div>
               <div class="carousel-item">
                 <div class="text-center">
-                  <img src="{{ asset('template1/assets/img/testimonial/testi2.jpg') }}" alt="Testimoni 2"
-                    class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img src="{{ asset('template1/assets/img/testimoni/testi (2).jpg') }}" alt="Testimoni 2"
+                    class="img-fluid rounded" style="width: 300px; height: auto; object-fit: contain;">
                   <h5 class="mt-2">Rina Sari</h5>
                   <div class="rating">
                     <i class="bi bi-star-fill text-warning"></i>
@@ -329,8 +329,8 @@
               </div>
               <div class="carousel-item">
                 <div class="text-center">
-                  <img src="{{ asset('template1/assets/img/testimonial/testi3.jpg') }}" alt="Testimoni 3"
-                    class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img src="{{ asset('template1/assets/img/testimoni/testi (3).jpg') }}" alt="Testimoni 3"
+                    class="img-fluid rounded" style="width: 300px; height: auto; object-fit: contain;">
                   <h5 class="mt-2">Dewi Lestari</h5>
                   <div class="rating">
                     <i class="bi bi-star-fill text-warning"></i>
@@ -344,8 +344,8 @@
               </div>
               <div class="carousel-item">
                 <div class="text-center">
-                  <img src="{{ asset('template1/assets/img/testimonial/testi4.jpg') }}" alt="Testimoni 4"
-                    class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img src="{{ asset('template1/assets/img/testimoni/testi (4).jpg') }}" alt="Testimoni 4"
+                    class="img-fluid rounded" style="width: 300px; height: auto; object-fit: contain;">
                   <h5 class="mt-2">Hana Putri</h5>
                   <div class="rating">
                     <i class="bi bi-star-fill text-warning"></i>
@@ -359,8 +359,8 @@
               </div>
               <div class="carousel-item">
                 <div class="text-center">
-                  <img src="{{ asset('template1/assets/img/testimonial/testi5.jpg') }}" alt="Testimoni 5"
-                    class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img src="{{ asset('template1/assets/img/testimoni/testi (5).jpg') }}" alt="Testimoni 5"
+                    class="img-fluid rounded" style="width: 300px; height: auto; object-fit: contain;">
                   <h5 class="mt-2">Zahra Amalia</h5>
                   <div class="rating">
                     <i class="bi bi-star-fill text-warning"></i>
@@ -392,7 +392,6 @@
     <section id="gallery" class="gallery section" style="background-color: #E0E0E0;">
       <div class="container section-title" data-aos="fade-up">
         <h2>Galeri Inspirasi</h2>
-        <p>Lihat gaya hijab dari pelanggan kami.</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
@@ -410,7 +409,7 @@
           </div>
           <div class="col">
             <div class="gallery-item p-3">
-              <img src="{{ asset('template1/assets/img/galeri.jpg') }}" alt="Gallery 3" class="img-fluid rounded"
+              <img src="{{ asset('template1/assets/img/gambar(7).heic') }}" alt="Gallery 3" class="img-fluid rounded"
                 style="height: 300px;  width: 100%;">
             </div>
           </div>
@@ -426,20 +425,18 @@
           <p>© Copyright Ayna Looks. All Rights Reserved.</p>
         </div>
         <div class="footer-section social-media">
-          <a href="https://www.tiktok.com/@aynalooks" target="_blank"><i class="bi bi-tiktok"></i> TikTok</a>
-          <a href="https://www.instagram.com/aynalooks" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
-          <a href="https://shopee.co.id/aynalooks" target="_blank"><i class="bi bi-shop"></i> Shopee</a>
+          <a href="https://wa.me/6287884770710" target="_blank"><i class="bi bi-tiktok"></i>087884770710</a>
+          <a href="https://www.tiktok.com/@bellstore.id__" target="_blank"><i class="bi bi-tiktok"></i>
+            bellstore.id__</a>
+          <a href="https://www.instagram.com/aynalooks" target="_blank"><i class="bi bi-instagram"></i> @aynalooks</a>
+          <a href="https://shopee.co.id/bellstore.id1" target="_blank"><i class="bi bi-shop"></i> bellstore.id1</a>
         </div>
         <div class="footer-section address">
-          <p>Alamat: Jl. Contoh No. 123, Jakarta, Indonesia</p>
+          <p>Toko Offline: Pasar Mayong Blok F No 76-77</p>
         </div>
       </div>
     </div>
   </footer>
-
-  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-  </a>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>

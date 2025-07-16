@@ -76,7 +76,7 @@ class CartController extends Controller
 
             session()->forget('cart');
 
-            $message = "Halo, ada pesanan baru dari $customerName:\n\n*Detail Pesanan:*\n" . implode('\n', array_map(function($item) {
+            $message = "Halo, ada pesanan baru dari $customerName:\n\n*Detail Pesanan:*\n" . implode('\n', array_map(function ($item) {
                 return "*{$item['nama_produk']}* - Jumlah: {$item['jumlah']} - Harga: Rp" . number_format($item['harga_satuan'], 0, ',', '.') . " - Total: Rp" . number_format($item['subtotal'], 0, ',', '.');
             }, $itemsData)) . "\n\n*Total Bayar:* Rp" . number_format($grandTotal, 0, ',', '.') . "\n\n*Nomor Telepon Pelanggan:* $customerPhone\n\n*Alamat Pengiriman:* {$user->alamat_pengiriman}\n\nMohon konfirmasi pesanan ini. Terima kasih!";
             $encodedMessage = urlencode($message);
@@ -116,4 +116,6 @@ class CartController extends Controller
 
         return redirect()->route('cart')->with('success', 'Produk berhasil ditambahkan ke keranjang!');
     }
+
+
 }

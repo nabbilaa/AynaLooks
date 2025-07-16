@@ -14,6 +14,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\WhatsAppController;
 
 
 
@@ -36,6 +37,8 @@ Route::get('/category', [LandingPageController::class, 'category'])->name('landi
 
 //PageProduct
 Route::get('/product', [LandingPageController::class, 'product'])->name('landing.product');
+
+Route::get('/shop', [LandingPageController::class, 'index'])->name('category.index');
 
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
@@ -63,9 +66,8 @@ Route::get('/register', function () {
 
 Route::resource('kategori', kategoricontroller::class);
 
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-})->name('admin.dashboard');
+Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
 
 Route::resource('produk', produkcontroller::class);
 
@@ -127,19 +129,29 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
 
- Route::middleware('auth')->group(function () {
-         Route::get('/account', [AccountController::class, 'index'])->name('account.index');
-         Route::get('/account/orders', [AccountController::class, 'orders'])->name('account.orders');
-         Route::get('/profile', [AccountController::class, 'show'])->name('account.index');
-         Route::put('/profile', [AccountController::class, 'update'])->name('profile.update');
-     });
+Route::middleware('auth')->group(function () {
+    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+    Route::get('/account/orders', [AccountController::class, 'orders'])->name('account.orders');
+    Route::get('/profile', [AccountController::class, 'show'])->name('account.index');
+    Route::put('/profile', [AccountController::class, 'update'])->name('profile.update');
+});
 
-     // Rute autentikasi
-     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-     Route::post('/login', [LoginController::class, 'login']);
+// Rute autentikasi
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
 
-     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-     Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-     Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
 
-Route::resource('orders', OrderController::class);
+Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
+
+Route::get('/form-wa', function () {
+    return view('form');
+});
+
+Route::get('/kirim-whatsapp', [WhatsAppController::class, 'kirim'])->name('kirim.whatsapp');
+
+Route::get('/account/orders', [AccountController::class, 'orders'])->name('account.orders')->middleware('auth');
+

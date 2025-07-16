@@ -1820,7 +1820,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: -15px;
-  z-index: 99999;
+  z-index: 10000;
   background-color: var(--accent-color);
   width: 44px;
   height: 44px;
@@ -12577,3 +12577,33 @@ body.login-register-page {
         margin-bottom: 15px; /* Jarak antar item di mobile */
     }
 }
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 125%; /* Rasio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .video-wrapper .tutorial-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px;
+  }
+
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+    .video-wrapper {
+      padding-bottom: 150%; /* Rasio yang lebih lebar untuk mobile */
+    }
+
+    .tutorial-card {
+    overflow: visible;
+  }
+  }
+
+  

@@ -56,23 +56,9 @@ class OrderController extends Controller
 
             $order->update($validated);
 
-            if ($statusChanged) {
-                switch ($validated['status']) {
-                    case 'diproses':
-                        $order->diproses_pada = now();
-                        break;
-                    case 'dikirim':
-                        $order->dikirim_pada = now();
-                        break;
-                    case 'selesai':
-                        $order->selesai_pada = now();
-                        break;
-                }
-                $order->save();
-            }
         });
 
-        return redirect()->route('orders.show', $order)
+        return redirect()->route('pesanan.index', $order)
             ->with('success', 'Status pesanan berhasil diperbarui.');
     }
 
