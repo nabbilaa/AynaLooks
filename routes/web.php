@@ -46,9 +46,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
 
 Route::get('/app', function () {
     return view('layouts.app');

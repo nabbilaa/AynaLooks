@@ -10,8 +10,8 @@
   <meta name="keywords" content="hijab, jilbab, fashion muslim, Ayna Looks, hijab premium, tutorial hijab, instagram">
 
   <!-- Favicons -->
-  <link href="{{ asset('template1/assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('template1/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('template1/assets/img/logo.jpg') }}" rel="icon">
+  <link href="{{ asset('template1/assets/img/logo.jpg') }}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link
@@ -307,7 +307,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
                   </div>
                   <p class="mt-2">"Hijabnya sangat nyaman dan desainnya elegan!"</p>
                 </div>
@@ -336,8 +336,8 @@
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
                   </div>
                   <p class="mt-2">"Bahan lembut dan sesuai ekspektasi."</p>
                 </div>
@@ -352,7 +352,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
                   </div>
                   <p class="mt-2">"Desainnya unik dan layanannya ramah."</p>
                 </div>
@@ -409,7 +409,7 @@
           </div>
           <div class="col">
             <div class="gallery-item p-3">
-              <img src="{{ asset('template1/assets/img/gambar(7).heic') }}" alt="Gallery 3" class="img-fluid rounded"
+              <img src="{{ asset('template1/assets/img/galeri1.jpg') }}" alt="Gallery 3" class="img-fluid rounded"
                 style="height: 300px;  width: 100%;">
             </div>
           </div>

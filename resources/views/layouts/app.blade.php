@@ -11,6 +11,11 @@
 
     <title>Ayna Looks - Dashboard Admin</title>
 
+    <!-- Favicons -->
+    <link href="{{ asset('template1/assets/img/logo.jpg') }}" rel="icon">
+    <link href="{{ asset('template1/assets/img/logo.jpg') }}" rel="apple-touch-icon">
+
+
     <!-- Custom fonts for this template-->
     <link href="{{asset('template/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
@@ -38,7 +43,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                
+
                 <!-- End of Topbar -->
                 @include('layouts.navbar')
                 <!-- Begin Page Content -->

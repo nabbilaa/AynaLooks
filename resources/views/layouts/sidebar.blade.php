@@ -2,11 +2,12 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-store"></i>
-        </div>
+        
+            <img src="{{ asset('template1/assets/img/logo.jpg') }}" alt="Logo" style="height: 40px;">
+        
         <div class="sidebar-brand-text mx-3">Ayna<sup>Looks</sup></div>
     </a>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">

@@ -35,7 +35,7 @@ class AdminController extends Controller
 
         return view('admin.dashboard', compact(
             'jumlahKategori',
-            'jumlahProduk',
+    'jumlahProduk',
             'jumlahPesanan',
             'pesananTerbaru',
             'bulan',
